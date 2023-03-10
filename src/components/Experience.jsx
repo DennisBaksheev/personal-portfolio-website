@@ -1,77 +1,69 @@
 import React from "react";
-
 import html from "../assets/html.png";
 import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
 import reactImage from "../assets/react.png";
-import Cplusplus from "../assets/Cplusplus.png";
-import graphql from "../assets/graphql.png";
-import github from "../assets/github.png";
+import cpppp from "../assets/cpppp.png";
+import python from "../assets/python.png";
 import tailwind from "../assets/tailwind.png";
 
 const Experience = () => {
   const techs = [
     {
       id: 1,
-      src: html,
-      title: "HTML",
-      style: "shadow-orange-500",
+      src: cpppp,
+      title: "C++",
+      style: "shadow-white",
     },
     {
       id: 2,
-      src: css,
-      title: "CSS",
-      style: "shadow-blue-500",
+      src: python,
+      title: "Python",
+      style: "shadow-yellow-400",
     },
     {
       id: 3,
-      src: javascript,
-      title: "JavaScript",
-      style: "shadow-yellow-500",
-    },
-    {
-      id: 4,
       src: reactImage,
       title: "React",
       style: "shadow-blue-600",
     },
     {
+      id: 4,
+      src: html,
+      title: "HTML",
+      style: "shadow-orange-500",
+    },
+    {
       id: 5,
+      src: css,
+      title: "CSS",
+      style: "shadow-blue-700",
+    },
+    {
+      id: 6,
+      src: javascript,
+      title: "JavaScript",
+      style: "shadow-yellow-400",
+    },
+    {
+      id: 7,
       src: tailwind,
       title: "Tailwind",
       style: "shadow-sky-400",
     },
-    {
-      id: 6,
-      src: Cplusplus,
-      title: "C++",
-      style: "shadow-white",
-    },
-    {
-      id: 7,
-      src: graphql,
-      title: "GraphQL",
-      style: "shadow-pink-400",
-    },
-    {
-      id: 8,
-      src: github,
-      title: "GitHub",
-      style: "shadow-gray-400",
-    },
-  ];
+    ];
 
   return (
     <div
       name="experience"
-      className="bg-gradient-to-b from-gray-800 to-black w-full h-screen"
+      className="bg-gradient-to-b from-black to-sky-900 w-full h-screen"
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
-      <div style={{ marginTop: "1rem" }}>
-       <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline h-5">
+      <div style={{ marginTop: "20rem" }}>
+       <p className="text-4xl font-bold border-b-4 border-violet-700 p-2 inline md-h-5">
             Experience
           </p>
-          <p className="py-6">These are the technologies I've worked with</p>
+          <p className="py-6">Technologies I've worked with!</p>
         </div>
 
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">

@@ -4,20 +4,26 @@ const About = () => {
   return (
     <div
       name="about"
-      className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
+      className="w-full h-screen bg-gradient-to-b from-black to-sky-900 text-white"
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-44">
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500 mt-5">
+          <p className="text-4xl font-bold inline border-b-4 border-violet-700 mt-5">
+            <br />
             About
           </p>
         </div>
 
         <p className="text-xl mt-5">
-        I'm a passionate computer programming student currently enrolled in the CPP program at Seneca College. Coding is my passion and I love learning about computer programming and software development. I enjoy working on personal programming projects and contributing to open-source software initiatives. My goal is to make a meaningful impact in the world of technology, and craft innovative and practical software solutions that solve real-world problems and improve people's lives. I aspire to work as a software developer in a fast-paced and dynamic environment where I can put my skills and knowledge to use in creating high-quality software products.
+        I'm a passionate computer programming student enrolled in CPP program at Seneca College.
+        <p className="text-xl mt-5"></p>
+        I enjoy working on personal projects and contributing to open-source software initiatives.
+        </p>
+        <p className="text-xl mt-5">
+        My goal is to develop software solutions that address real-world problems and enhance people's lives.
         </p>
 
-        <br />
+        
 
         
       </div>
