@@ -34,10 +34,10 @@ To run this project locally, you'll need to have Node.js installed on your compu
 
 ## Deployment
 
-To view the live version of the project, simply click on the following link:
+To view the live version of the project, simply click on the following link: 
 
-[Running Project](https://shimmering-pixie-ac3f24.netlify.app/)
-
+<a href="https://shimmering-pixie-ac3f24.netlify.app/" target="_blank">Running Project</a>
+ 
 This link will take you to the deployed version of the project, where you can explore its features and functionality.
 
 Alternatively, you can also clone the project to your local machine and run it locally. See the "Getting Started" section for instructions on how to do this.
