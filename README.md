@@ -7,10 +7,10 @@ This is my personal portfolio website, which I created from scratch using Tailwi
 
 ## Technologies Used
 
-JavaScript
-React
-Tailwind CSS
-Netlify
+- **JavaScript**
+- **React**
+- **Tailwind CSS**
+- **Netlify**
 
 ## Features
 
