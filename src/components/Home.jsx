@@ -1,12 +1,12 @@
 import React from "react";
-import HeroImage from "../assets/heroImage.png";
+import HeroImage from "../assets/newheroImage.JPG";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 
 const Home = () => {
   return (
     <div 
-    name="home"
+      name="home"
       className="h-screen w-full bg-gradient-to-b from-sky-900 to-black"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
@@ -15,7 +15,7 @@ const Home = () => {
             I'm a Software Developer 
           </h2>
           <p className="text-white py-4 max-w-md">
-          Hey there! I'm Dennis, a passionate software Developer from Toronto, ON who loves bringing ideas to life.
+            Hey there! I'm Dennis, a passionate software Developer from Toronto, ON who loves bringing ideas to life.
           </p>
 
           <div>
@@ -33,12 +33,13 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <img
-            src={HeroImage}
-            alt="my profile"
-            className="rounded-2xl mx-auto w-2/3 md:w-full"
-          />
-        </div>
+  <img
+    src={HeroImage}
+    alt="my profile"
+    className="rounded-lg mx-auto w-auto h-auto sm:w-[600px] sm:h-[400px] md:w-[700px] md:h-[500px] object-contain object-center"
+  />
+</div>
+
       </div>
     </div>
   );

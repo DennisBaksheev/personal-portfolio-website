@@ -15,7 +15,7 @@ const About = () => {
         </div>
 
         <p className="text-xl mt-5">
-        I'm a passionate computer programming student enrolled in CPP program at Seneca College.
+        I'm a passionate computer programming student enrolled in the CPA program at Seneca College.
         <p className="text-xl mt-5"></p>
         I enjoy working on personal projects and contributing to open-source software initiatives.
         </p>
