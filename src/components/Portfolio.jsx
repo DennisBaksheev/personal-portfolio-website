@@ -14,6 +14,7 @@ const Portfolio = () => {
       title: "Fragment UI & Fragments Microservice",
       src: fragmentui,
       description: `The "Fragment UI & Fragments Microservice" project represents a comprehensive full-stack development effort, combining a front-end web application with a cloud-based microservice backend. The Fragments UI provides a user-friendly interface for managing text, images, and JSON data, and features Docker integration, multi-stage builds, Nginx for static site serving, integrated AWS Cognito for security, and AWS backend integration. The Fragments Microservice, designed for handling a variety of data sources, includes features like CRUD operations, data conversion, enhanced security, and scalability. Deployed on AWS, it employs GitHub Actions for CI/CD and Docker Compose for container management, showcasing a sophisticated, scalable, and user-focused software development approach.`,
+      shortDescription: "The Fragment UI & Fragments Microservice project represents a comprehensive full-stack project, combining a front-end web application with a cloud-based microservice backend.",
       stack: ["Docker",
       "Nginx",
       "AWS Cognito",
@@ -37,9 +38,10 @@ const Portfolio = () => {
       title: "Show Biz",
       src: ShowBiz,
       description: "Show Biz is a TV Production Management App it is an innovative web application designed to optimize TV production management. This app serves as a comprehensive tool for managing actors, TV series, and episodes with precision and ease. It features user roles like Executive, Coordinator, and Admin, each tailored with specific access levels to streamline the production process. The application stands out for its rich text support, enhancing actor biographies and show descriptions, and its ability to handle diverse multimedia uploads. Seamlessly integrated with Microsoft Azure for reliable hosting, it represents a pinnacle of web application development, showcasing proficiency in ASP.NET, C#, Entity Framework, and Azure deployment. This project is a testament to advanced web programming skills, emphasizing security, data management, and user-friendly design.",
+      shortDescription: "Show Biz is a TV Production Management App it is an innovative web application designed to optimize TV production management. This app serves as a comprehensive tool for managing actors, TV series, and episodes with precision and ease.",
       stack: ["ASP.NET", "C#", "JavaScript","HTML", "Entity Framework", "Microsoft Azure"],
-      github: "https://github.com/DennisBaksheev/Show-Biz",
-      live: "https://dbaksheev-a5.azurewebsites.net/",
+      github: "https://github.com/DennisBaksheev/Show-Biz"
+      
     },
 
     {
@@ -47,6 +49,7 @@ const Portfolio = () => {
       title: "Arkanoid",
       src: Arkanoid,
       description: "The 3D Arkanoid Game project revitalizes the iconic Arkanoid game with a contemporary 3D perspective, achieved through the adept use of OpenGL. This rendition, set within a 1024x768 window, invites players to a dynamic and immersive experience from a static 3/4 view. The game is distinguished by its 3D graphics, interactive controls utilizing keyboard arrows for navigation and a spacebar for sphere launch, and an escape key for exiting. It features advanced collision detection between the sphere and bricks, enriched by unique textures for visual appeal. The game poses an additional challenge, ending if the sphere is missed, thereby raising the stakes. Technically, the game stands out for its OpenGL-based 3D rendering, sophisticated collision detection, and first-time texture mapping. As a personal endeavor, this project pushed the boundaries of my capabilities in game development, particularly in texture mapping and collision mechanics. Future enhancements may include new challenging levels, power-ups for an exhilarating experience, and a competitive scoring system with leaderboards.",
+      shortDescription: "The 3D Arkanoid Game project revitalizes the iconic Arkanoid game with a contemporary 3D perspective, achieved through the adept use of OpenGL. This rendition, set within a 1024x768 window, invites players to a dynamic and immersive experience from a static 3/4 view.",
       stack: ["OpenGL", "C++"],
       github: "https://github.com/DennisBaksheev/Arkanoid-",
     },
@@ -56,6 +59,7 @@ const Portfolio = () => {
       title: "PythonPygameChess",
       src: PythonPygameChess,  // Use the imported image variable
       description: "This Python-Pygame Chess Game project is an interactive and user-friendly chess application developed in Python, utilizing the Pygame library for graphical rendering. Aimed at providing a classic chess experience, it supports two-player gameplay where individuals can challenge each other in a strategic battle of minds. The game faithfully adheres to traditional chess rules, ensuring a familiar and authentic experience for chess enthusiasts.",
+      shortDescription: "This Python-Pygame Chess Game project is an interactive and user-friendly chess application developed in Python, utilizing the Pygame library for graphical rendering.",
       stack: ["Python", "Pygame"],
       github: "https://github.com/DennisBaksheev/Python-Pygame-Chess",
       
@@ -66,6 +70,7 @@ const Portfolio = () => {
       title: "Personal Portfolio Website",
       src: personalportfoliowebsite,
       description: `My Personal Portfolio Website is a dynamic showcase of my software development journey, crafted using JavaScript and React with styling from Tailwind CSS, and efficiently deployed on Netlify. This project exemplifies my skills in creating responsive, user-friendly web interfaces, incorporating features like smooth scrolling with react-scroll, social media integration, custom Google Fonts, and a visually appealing gradient background. Designed to highlight my professional experiences and projects, this website stands as a testament to my proficiency in web development and my passion for blending functionality with aesthetic design.`,
+      shortDescription: "My Personal Portfolio Website is a dynamic showcase of my software development journey, crafted using JavaScript and React with styling from Tailwind CSS, and efficiently deployed on Netlify.",
       stack: ["JavaScript", "React", "HTML", "Tailwind CSS", "Netlify"],
       github: "https://github.com/DennisBaksheev/personal-portfolio-website?tab=readme-ov-file",
       live: "https://shimmering-pixie-ac3f24.netlify.app/",
@@ -77,6 +82,7 @@ const Portfolio = () => {
       src: BookWorm,
       description: 
       `The Bookworm Web App is a dynamic and intuitive platform for book enthusiasts, revolutionizing book discovery through the Google Books API. It simplifies managing personal reading lists, offering a user-friendly experience. Developed using advanced technologies like Node.js, Express.js, MongoDB, Mongoose, and EJS, the app provides a robust backend and a seamless frontend. It incorporates secure Google OAuth for user authentication, ensuring privacy and streamlined access. Additionally, the app uses Passport.js for authentication and Axios for efficient API interactions. Its straightforward installation process makes it easily accessible for local browser use. From signing up and logging in to book searching and list management, the Bookworm Web App delivers a comprehensive and engaging user experience, showcasing a commitment to sophisticated, user-centric web development.`,
+      shortDescription: "The Bookworm Web App is a dynamic and intuitive platform for book enthusiasts, revolutionizing book discovery through the Google Books API. It simplifies managing personal reading lists, offering a user-friendly experience.",
       stack: ["Node.js", "Express.js", "MongoDB", "Mongoose", "JavaScript", "EJS", "Google Books API", "Google OAuth", "Passport.js", "Axios"],
       github: "https://github.com/DennisBaksheev/BookWorm",
       live: "https://reflective-voracious-provelone.glitch.me/",
@@ -86,14 +92,15 @@ const Portfolio = () => {
 
   const openProjectDetails = (project) => {
     setSelectedProject(project);
+    document.body.classList.add('modal-open');
   };
 
   const closeProjectDetails = () => {
     setSelectedProject(null);
+    document.body.classList.remove('modal-open');
   };
 
   const renderModal = () => {
-    // Open GitHub links
     const openGitHubLinks = () => {
       if (Array.isArray(selectedProject.github)) {
         selectedProject.github.forEach(link => {
@@ -104,7 +111,6 @@ const Portfolio = () => {
       }
     };
   
-    // Close modal when clicking outside
     const handleBackdropClick = (event) => {
       if (event.currentTarget === event.target) {
         closeProjectDetails();
@@ -113,28 +119,33 @@ const Portfolio = () => {
   
     return (
       <div className="modal-backdrop" onClick={handleBackdropClick}>
-        <div className="modal-content mobile-modal">
-          <button onClick={closeProjectDetails} className="modal-close-button mobile-close-button">X</button>
-          <h2 className="modal-title">{selectedProject.title}</h2>
-          <img src={selectedProject.src} alt={selectedProject.title} className="modal-project-image" />
-          <p className="modal-description">{selectedProject.description}</p>
-  
-          {/* Stack section */}
-          <div className="modal-stack">
-            <h3 className="stack-title">Technologies & Tools</h3>
-            <ul className="stack-list">
-              {/* Dynamically list technologies based on the project */}
-              {selectedProject.stack && selectedProject.stack.map((tech, index) => (
-                <li key={index}>{tech}</li>
-              ))}
-            </ul>
-          </div>
-  
-          <div className="modal-buttons">
-            <button onClick={openGitHubLinks} className="modal-button github">View on GitHub</button>
-            {selectedProject.live && 
-              <a href={selectedProject.live} target="_blank" rel="noopener noreferrer" className="modal-button live">Live Demo</a>
-            }
+        <div className="modal-content">
+          <button onClick={closeProjectDetails} className="modal-close-button">&times;</button>
+          <div className="modal-inner">
+            <h2 className="modal-title">{selectedProject.title}</h2>
+            <div className="modal-image-container">
+              <img src={selectedProject.src} alt={selectedProject.title} className="modal-project-image" />
+            </div>
+            <p className="modal-description modal-description-full">{selectedProject.description}</p>
+            <p className="modal-description modal-description-short">{selectedProject.shortDescription}</p>
+            <div className="modal-buttons">
+              <button onClick={openGitHubLinks} className="modal-button github">
+                <i className="fab fa-github"></i> View on GitHub
+              </button>
+              {selectedProject.live && 
+                <a href={selectedProject.live} target="_blank" rel="noopener noreferrer" className="modal-button live">
+                  <i className="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              }
+            </div>
+            <div className="modal-stack">
+              <h3 className="stack-title">Technologies & Tools</h3>
+              <ul className="stack-list">
+                {selectedProject.stack && selectedProject.stack.map((tech, index) => (
+                  <li key={index}>{tech}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
